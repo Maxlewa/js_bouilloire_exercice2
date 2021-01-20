@@ -1,11 +1,13 @@
-
-chauffer = (temperature) => {
-    while (temperature < 100) {
-        setTimeout(move, 1000)
-        return temperature + 20
-    }
+let chauffer = (x) => {
+    setTimeout(() => {
+        if (x.temperature < 100) {
+            x.temperature += 20
+            console.log(`La température est de ${x.temperature} degrés`);
+            chauffer(x)
+        } else {
+            console.log("L'eau est chauffée");
+        }
+    }, 1000)
 }
-
-console.log(chauffer(temperature));
 
 export {chauffer}

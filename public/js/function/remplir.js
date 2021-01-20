@@ -1,7 +1,5 @@
-import {Bouilloire, eau, temperature} from '../main.js'
-
-remplir = () => {
-    eau.push("eau")
+let remplir = (x) => {
+    x.eau = "rempli"
 }
 
 export {remplir}
